@@ -1,0 +1,93 @@
+CREATE TABLE post(
+	id SERIAL,
+	usuario VARCHAR(20),
+	fecha_de_creacion DATE,
+	contenido VARCHAR,
+	descripcion VARCHAR,
+	PRIMARY KEY (id)
+);
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Pamela', '06-06-2001', 'Makeup', 'School');
+
+SELECT * FROM post;
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Pamela', '14-10-1997', 'Heaven', 'University');
+
+SELECT * FROM post;
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Carlos', '30-11-1997', 'House', 'Institute');
+
+ALTER TABLE post ADD Titulo VARCHAR(70);
+
+UPDATE post SET titulo = 'happyhill' WHERE id = 1;
+
+UPDATE post SET titulo = 'hill' WHERE id = 2;
+
+UPDATE post SET titulo = 'mountain' WHERE id = 3;
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Pedro', '30-11-1973', 'Home', 'Job');
+
+UPDATE post SET titulo = 'rocks' WHERE id = 4;
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion, titulo)
+VALUES ('Pedro', '22-01-1976', 'couintryside', 'relax', 'county');
+
+DELETE FROM post WHERE id = 3;
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion, titulo)
+VALUES ('Carlos', '27-07-2020', 'deleted', 'added', 'happyness');
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (1, '27-07-2020 10:10:10', 'post1 Pamela', 1);
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (2, '27-07-2020 11:11:11', 'post2 Pamela', 2);
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (3, '27-07-2020 12:12:12', 'post1 Carlos', 6); 
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (4, '27-07-2020 13:13:13', 'post2 Carlos', 6); 
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (5, '27-07-2020 14:14:14', 'post3 Carlos', 6); 
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (6, '27-07-2020 15:15:15', 'post4 Carlos', 6);
+
+
+INSERT INTO post (usuario, fecha_de_creacion, contenido, descripcion, titulo)
+VALUES ('Margarita', '30-10-1976', 'country', 'stress', 'city');
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (7, '27-07-2020 16:16:16', 'post1 Margarita', 7);
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (8, '27-07-2020 18:18:18', 'post3 Margarita', 7);
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (9, '27-07-2020 17:17:17', 'post2 Margarita', 7);
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (10, '27-07-2020 19:19:19', 'post4 Margarita', 7);
+
+INSERT INTO comentarios (id, fecha_de_creacion, contenido, id_post)
+VALUES (11, '27-07-2020 20:20:20', 'post5 Margarita', 7);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
