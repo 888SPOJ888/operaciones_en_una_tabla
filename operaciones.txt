@@ -1,3 +1,5 @@
+CREATE DATABASE posts;
+
 CREATE TABLE post(
 	id SERIAL,
 	usuario VARCHAR(20),
